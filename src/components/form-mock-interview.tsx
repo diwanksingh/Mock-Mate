@@ -9,7 +9,7 @@ import { useAuth } from "@clerk/clerk-react";
 import { toast } from "sonner";
 import { Headings } from "./headings";
 import { Button } from "./ui/button";
-import { Loader, Trash2 } from "lucide-react";
+import { Circle, Loader, RefreshCcw, Trash2 } from "lucide-react";
 import {
   FormControl,
   FormField,
@@ -220,7 +220,7 @@ Return only the JSON array. No extra text, formatting, or code blocks.
                 <FormLabel>Job Role / Job Position</FormLabel>
                 <FormControl>
                   <Input
-                    className="h-12"
+                    className="h-12 disabled:bg-muted bg-background"
                     disabled={isSubmitting}
                     placeholder="e.g., Full Stack Developer"
                     {...field}
@@ -339,12 +339,12 @@ Return only the JSON array. No extra text, formatting, or code blocks.
 
           {/* Buttons */}
           <div className="w-full flex justify-end gap-4">
-            <Button type="reset" variant="outline" size="sm" disabled={isSubmitting}>
-              Reset
+            <Button type="reset"  size="sm" disabled={isSubmitting}>
+             <RefreshCcw/> Reset
             </Button>
-            <Button type="submit" size="sm" disabled={isSubmitting || !isValid}>
+            <Button type="submit" size="sm" disabled={isSubmitting}>
               {isSubmitting ? (
-                <Loader className="text-white animate-spin" />
+                <Loader className="text-white dark:text-black animate-spin" />
               ) : (
                 actions
               )}
