@@ -9,7 +9,7 @@ import { useAuth } from "@clerk/clerk-react";
 import { toast } from "sonner";
 import { Headings } from "./headings";
 import { Button } from "./ui/button";
-import { Circle, Loader, RefreshCcw, Trash2 } from "lucide-react";
+import {  Loader, RefreshCcw, Trash2 } from "lucide-react";
 import {
   FormControl,
   FormField,
